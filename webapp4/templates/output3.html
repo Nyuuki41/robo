@@ -1,0 +1,30 @@
+<html>
+   <html lang="jp">
+   <head>
+       <title>家計簿</title>
+   </head>
+   <body>
+      <table border = 1>
+         
+         {%if ans%}
+         <p>{{ time }}</p>
+       
+         <p>今月はあと{{ sendnum3 }}円使える</p>
+        
+　　　　  {% else %}
+            
+          {% endif %}
+      </table>
+
+      <form action = "/output" method = "POST">
+         <p>収入を入力</p>
+         <p><input type ="number" name = "num1" />円</p>
+         <p>支出を入力</p>
+         <p><input type ="number" name = "num2" />円</p>
+       
+        
+         <p><input type = "submit" value = "送信" /></p>
+      </form>
+
+   </body>
+</html>
